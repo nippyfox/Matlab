@@ -1,4 +1,4 @@
-% Задание 1.1. All graphs in one window
+% Task 1.1. All graphs in one window
 x = -5:0.0001:5;
 y1 = sin(x).*x;
 y2 = sin(x)+cos(x);
@@ -12,7 +12,7 @@ while not(m == 0)
     m = input('Type 0');
 end
 clf;
-% Задание 1.2. Each graph in its window
+% Task 1.2. Each graph in its window
 x1 = -5:0.0001:5;
 x2 = -5:0.0001:5;
 x3 = -5:0.0001:5;
@@ -47,11 +47,12 @@ while not(m == 0)
 end
 clf;
 
-% Задание 2.
+% Task 2.
 x = -5:0.0001:5;
 y = ((abs(x)/(1+x.^2)).*exp(-2.*x)).*(x<=0)+(sqrt(1+x.^2)).*(x>0);
 plot(x, y, '-g');
 legend('y = abs(x)/(1+x^2))*exp(-2*x), when x <= 0; y = sqrt(1+x^2), when x > 0');
 xlim([-5, 5]);
+ylim([-1, 9]);
 axis square;
 grid on;
