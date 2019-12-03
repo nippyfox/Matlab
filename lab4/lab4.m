@@ -30,37 +30,37 @@ t3 = str1;
 for i = 1:length(str1) % Rewriting numbers to words
     switch str1(i)
         case '0'
-            t3 = strrep(t3, '0', 'ноль');
+            t3 = strrep(t3, '0', 'РЅРѕР»СЊ');
         case '1'
-            t3 = strrep(t3, '1', 'один');
+            t3 = strrep(t3, '1', 'РѕРґРёРЅ');
         case '2'
-            t3 = strrep(t3, '2', 'два');
+            t3 = strrep(t3, '2', 'РґРІР°');
         case '3'
-            t3 = strrep(t3, '3', 'три');
+            t3 = strrep(t3, '3', 'С‚СЂРё');
         case '4'
-            t3 = strrep(t3, '4', 'четыре');
+            t3 = strrep(t3, '4', 'С‡РµС‚С‹СЂРµ');
         case '5'
-            t3 = strrep(t3, '5', 'пять');
+            t3 = strrep(t3, '5', 'РїСЏС‚СЊ');
         case '6'
-            t3 = strrep(t3, '6', 'шесть');
+            t3 = strrep(t3, '6', 'С€РµСЃС‚СЊ');
         case '7'
-            t3 = strrep(t3, '7', 'семь');
+            t3 = strrep(t3, '7', 'СЃРµРјСЊ');
         case '8'
-            t3 = strrep(t3, '8', 'восемь');
+            t3 = strrep(t3, '8', 'РІРѕСЃРµРјСЊ');
         case '9'
-            t3 = strrep(t3, '9', 'девять');
+            t3 = strrep(t3, '9', 'РґРµРІСЏС‚СЊ');
     end
 end
 disp(t3); % Output line with numerals
 % Task 4.
-t4 = []; % Сreate an array for the numbers from the string
+t4 = []; % РЎreate an array for the numbers from the string
 sp = strfind(str1, ' '); % Find all spaces in a string
 sp_fix = [0 sp length(str1)+1]; % Add "two spaces" at the beginning and at the end for correct code operation
 for i = 1:length(sp_fix)-1
     word = str1(sp_fix(i)+1:sp_fix(i+1)-1); % Find a word
     to_num = str2num(word); % Number check
     if isnumeric(to_num) == 1 % Add to array, if there is a number
-        t4 = [t4 to_num]; 
+        t4 = [t4 to_num];
     end
 end
 disp(t4); % Output an array
@@ -81,7 +81,7 @@ for i = 1:length(sp_f1)-1
     word = str2(sp_f1(i)+1:sp_f1(i+1)-1);
     to_num = str2num(word);
     if isnumeric(to_num) == 1
-        t61 = [t61 to_num]; 
+        t61 = [t61 to_num];
     end
 end
 disp(t61);
@@ -91,7 +91,7 @@ for i = 1:length(sp_f2)-1
     word = str3(sp_f2(i)+1:sp_f2(i+1)-1);
     to_num = str2num(word);
     if isnumeric(to_num) == 1
-        t62 = [t62 to_num]; 
+        t62 = [t62 to_num];
     end
 end
 disp(t62);
@@ -101,7 +101,7 @@ for i = 1:length(sp_f3)-1
     word = str2(sp_f3(i)+1:sp_f3(i+1)-1);
     to_num = str2num(word);
     if isnumeric(to_num) == 1
-        t63 = [t63 to_num]; 
+        t63 = [t63 to_num];
     end
 end
 disp(t63);
@@ -116,20 +116,20 @@ cd(DirName1);
 FileHtml=fopen(['lab_4_' File1NameExp '.htm'],'wt'); % Open HTML-file
 fprintf(FileHtml, ('<HTML>\n')); % Writing a HTML-file
 fprintf(FileHtml, ('<head>\n'));
-fprintf(FileHtml, ('<title>Отчет по лабораторной работе \n'));
+fprintf(FileHtml, ('<title>РћС‚С‡РµС‚ РїРѕ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕР№ СЂР°Р±РѕС‚Рµ \n'));
 fprintf(FileHtml, ('</title>\n'));
 fprintf(FileHtml, ('<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows">\n'));
 fprintf(FileHtml, ('</head>\n'));
 fprintf(FileHtml, ('<body>\n'));
-fprintf(FileHtml, ('<center><H3>ОТЧЕТ<br>по лабораторной работе</h3></center>\n'));
-fprintf(FileHtml, ('<h3>Исходные данные</h3>\n'));
+fprintf(FileHtml, ('<center><H3>РћРўР§Р•Рў<br>РїРѕ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕР№ СЂР°Р±РѕС‚Рµ</h3></center>\n'));
+fprintf(FileHtml, ('<h3>РСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ</h3>\n'));
 fprintf(FileHtml, (['<br><img src="tasks_lab4.jpg" >' '\n']));
 fprintf(FileHtml, (['<br><img src="version1.jpg" >' '\n']));
-fprintf(FileHtml, ('<<h3>Результат выполнения программы</h3>\n'));
-fprintf(FileHtml, ('<h4>Задания 1-6.</h4>\n'));
+fprintf(FileHtml, ('<<h3>Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РїСЂРѕРіСЂР°РјРјС‹</h3>\n'));
+fprintf(FileHtml, ('<h4>Р—Р°РґР°РЅРёСЏ 1-6.</h4>\n'));
 fprintf(FileHtml, (['<br><img src="lab4_result.jpg" >' '\n']));
-fprintf(FileHtml, ('<h4>Задание 7.</h4>\n'));
-h1=figure('Name','Модельное изображение (исходное Image0) im3d');
+fprintf(FileHtml, ('<h4>Р—Р°РґР°РЅРёРµ 7.</h4>\n'));
+h1=figure('Name','РњРѕРґРµР»СЊРЅРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ (РёСЃС…РѕРґРЅРѕРµ Image0) im3d');
 hold on
 grid on
 x = (1:0.01:5);
@@ -146,5 +146,5 @@ fprintf(FileHtml, ('</a>\n'));
 fprintf(FileHtml, ('</body>\n'));
 fprintf(FileHtml, ('</HTML>\n'));
 fclose(FileHtml); % Close all open files
-fclose(f); 
+fclose(f);
 fclose(ft);
